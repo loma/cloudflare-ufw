@@ -5,7 +5,7 @@ if [ -e ./ips-v4 ]; then
   for cfip in `cat ips-v4`; do ufw delete allow from $cfip to any port 443; done
 fi
 
-if [ -e ./ips-v4 ]; then
+if [ -e ./ips-v6 ]; then
   for cfip in `cat ips-v6`; do ufw delete allow from $cfip to any port 80; done
   for cfip in `cat ips-v6`; do ufw delete allow from $cfip to any port 443; done
 fi
